@@ -10,8 +10,8 @@ vim.g.clipboard = {
     ["*"] = "wl-copy --primary",
   },
   paste = {
-    ["+"] = "wl-paste --strip-newline",
-    ["*"] = "wl-paste --primary --strip-newline",
+    ["+"] = "wl-paste --no-newline",
+    ["*"] = "wl-paste --primary --no-newline",
   },
   cache_enabled = false,
 }
