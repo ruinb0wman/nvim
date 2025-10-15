@@ -2,11 +2,17 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- config for copy content
+-- config for copy content for wsl2
 vim.g.clipboard = {
-  name = "win32yank",
-  copy = { ["+"] = "win32yank.exe -i --crlf", ["*"] = "win32yank.exe -i --crlf" },
-  paste = { ["+"] = "win32yank.exe -o --lf", ["*"] = "win32yank.exe -o --lf" },
+  name = "wl-clipboard",
+  copy = {
+    ["+"] = "wl-copy",
+    ["*"] = "wl-copy --primary",
+  },
+  paste = {
+    ["+"] = "wl-paste --strip-newline",
+    ["*"] = "wl-paste --primary --strip-newline",
+  },
   cache_enabled = false,
 }
 
